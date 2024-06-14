@@ -16,12 +16,13 @@
 		"vscode": {
 			// Add the IDs of extensions you want installed when the container is created.
 			"extensions": [
-				"ms-vscode.cpptools",
-				"ms-vscode.cmake-tools",
+                "ms-vscode.cpptools-extension-pack",
 				"DavidSchuldenfrei.gtest-adapter"
-			]
+			],
+			// Set *default* container specific settings.json values on container create.
+			"settings": {}
 		}
-	},
+    },
 
     // Use 'forwardPorts' to make a list of ports inside the container available locally.
     // "forwardPorts": [],
@@ -33,6 +34,6 @@
     "remoteUser": "vscode",
 
     "mounts": [
-        "source=${localEnv:HOME}/data/gromacs-fda,target=/data,type=bind,consistency=cached"
+        "source=/hits/fast/its/doserbd/data/gromacs-fda,target=/data,type=bind,consistency=cached"
     ]
 }
